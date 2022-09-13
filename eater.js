@@ -4,7 +4,7 @@ class Eater {
 
     this.parts = [];
 
-    this.extent = 3;
+    // this.extent = 3;
 
     /*
     this.x = 0;
@@ -27,22 +27,25 @@ class Eater {
   consumSouls() {
     const headPart = this.parts[this.parts.length - 1];
 
-    if (this.game.soul.x === headPart.x && this.game.soul.y === headPart.y) {
-      /*
+    this.game.souls.forEach((soul) => {
+      if (soul.x === headPart.x && soul.y === headPart.y) {
+        /*
       this.game.soulX = Math.floor(Math.random() * this.game.tileCount);
       this.game.soulY = Math.floor(Math.random() * this.game.tileCount);
       */
-      this.game.soul.setRandomPosition();
-      // this.extent++;
-      const lastPart = this.parts[0];
+        soul.setRandomPosition();
+        // this.extent++;
+        const lastPart = this.parts[0];
 
-      let x = lastPart.x;
-      let y = lastPart.y;
+        let x = lastPart.x;
+        let y = lastPart.y;
 
-      const part = new Part(this, x, y, this.game.soul.color);
-      this.parts.unshift(part);
-      this.game.score++;
-    }
+        const part = new Part(this, x, y, soul.color);
+        this.parts.unshift(part);
+        this.game.score++;
+        this.game.addSouls();
+      }
+    });
   }
 
   runLogic() {
@@ -51,8 +54,7 @@ class Eater {
     let x = headPart.x;
     let y = headPart.y;
 
-    // it´s missing the case, where it´s not possible to go in the
-    // opposite direction, butthis one doesn´t work :(
+    // it´s missing the case, where it´s not possible to return without getting gameOver
     /*
     if (this.direction = "up") {
         y--;
@@ -74,15 +76,19 @@ class Eater {
 
     switch (this.direction) {
       case "up":
+        // if (headPart.y === this.parts) return;
         y--;
         break;
       case "right":
+        // if (headPart.x === this.parts) return;
         x++;
         break;
       case "down":
+        // if (headPart.y === this.parts) return;
         y++;
         break;
       case "left":
+        // if (headPart.x === this.parts) return;
         x--;
         break;
     }
@@ -97,8 +103,6 @@ class Eater {
       return;
     }
 
-    // problem part
-
     const part = this.parts.shift();
     part.x = x;
     part.y = y;
@@ -106,7 +110,6 @@ class Eater {
     this.parts.push(part);
 
     /*
-    // problem part
     if (this.parts.length > this.extent) {
       this.parts.shift();
     }

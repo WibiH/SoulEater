@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Lilliput Steps;
+  src: url(/fonts/lilliput\ steps.ttf);
+}
+
+@font-face {
+  font-family: Gothic Pixels;
+  src: url(/fonts/Gothic\ Pixels.ttf);
+}
+
 html,
 body {
   height: 100%;
@@ -9,6 +19,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: black;
+  font-family: Lilliput Steps;
 }
 
 .screen {
@@ -20,12 +31,93 @@ body {
   align-items: center;
 }
 
+#start-screen {
+  border: 1px solid white;
+}
+
+button {
+  font-family: Lilliput Steps;
+  color: white;
+  border: 3px solid white;
+  background-color: black;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+#startButton {
+  width: 280px;
+  height: 60px;
+}
+
+#moreButton {
+  width: 200px;
+  height: 60px;
+}
+
+/*hat noch keine verbindung*/
+:root {
+  --gradient: linear-gradient(
+    mediumslateblue,
+    deepskyblue,
+    palegreen,
+    gold,
+    lightsalmon
+  );
+}
+
+/*hat noch keine verbindung*/
+.gradient:hover {
+  background-image: let(--gradient);
+  cursor: pointer;
+}
+
+h1 {
+  margin: 0 25% 0;
+  background: linear-gradient(
+    to right,
+    mediumslateblue,
+    palegreen,
+    lightsalmon,
+    deepskyblue,
+    gold
+  );
+  font-family: Gothic Pixels;
+  font-size: 140px;
+  text-align: center;
+  /*line-height: 2px;
+  letter-spacing: 12px;*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  font-size: 24px;
+  color: white;
+}
+
 h2 {
-  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: Gothic Pixels;
+  color: white;
+  font-size: 100px;
+  letter-spacing: 10px;
+}
+
+h4 {
+  font-family: Lilliput Steps;
+  font-size: 20px;
   color: white;
 }
 
 canvas {
+  padding: 0;
+  margin: 0;
   background-color: black;
-  border: 1px solid white;
+  border: 30px solid white;
+  border-image: url(/images/tiles/wall_tilest.png) 36% round;
+}
+
+#game-over-screen {
+  border: 3px solid white;
 }

@@ -1,10 +1,25 @@
 class Soul {
   constructor(game) {
     this.game = game;
-    this.soul = {};
+
+    // soulImages
+    //this.soulSprites = {};
 
     this.x = 5;
     this.y = 5;
+
+    // soulImages
+    /*const colors = {
+      happy: "/images/souls/happySoul.png",
+      baby: "/images/souls/babySoul.png",
+      dull: "/images/souls/dullSoul.png",
+      unhappy: "/images/souls/unhappySoul.png",
+      grumpy: "/images/souls/grumpySoul.png",
+    };
+    for (let one in colors) {
+      this.soulSprites[one] = new Image();
+      this.soulSprites[one].src = colors[one];
+    }*/
   }
 
   setRandomPosition() {
@@ -14,29 +29,41 @@ class Soul {
     const eater = this.game.eater;
     if (eater.consumSouls()) {
       this.setRandomPosition();
-      //this.setRandomColor(); // gets overwritten by parts.fillstyle
     }
   }
 
   setRandomColor() {
     const context = this.game.context;
-    const colors = [
-      "red",
-      "green",
-      "blue",
-      "yellow",
-      "purple",
-      "pink",
-      "orange",
-    ];
 
+    // soulColor
+    const colors = [
+      "palegreen",
+      "deepskyblue",
+      "gold",
+      "lightsalmon",
+      "mediumslateblue",
+    ];
     this.color = colors[Math.floor(Math.random() * colors.length)];
+
+    // soulImages
+    //this.color =
+    //  this.soulSprites[Math.floor(Math.random() * this.soulSprites.length)];
   }
 
   draw() {
     const context = this.game.context;
     this.setRandomColor();
 
+    // soulImages
+    /* context.drawImage(
+      this.color,
+      this.x * this.game.tileCount,
+      this.y * this.game.tileCount,
+      this.game.tileSize,
+      this.game.tileSize
+    );*/
+
+    // soulColor
     context.fillStyle = this.color;
     context.fillRect(
       this.x * this.game.tileCount,
