@@ -3,14 +3,10 @@
   src: url(/fonts/lilliput\ steps.ttf);
 }
 
-@font-face {
-  font-family: Gothic Pixels;
-  src: url(/fonts/Gothic\ Pixels.ttf);
-}
-
 html,
 body {
   height: 100%;
+  background-image: url(/images/tiles/game-background2.png);
 }
 
 body {
@@ -18,7 +14,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
   font-family: Lilliput Steps;
 }
 
@@ -26,6 +21,7 @@ body {
   width: 800px;
   height: 600px;
   display: flex;
+  background-color: black;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -33,80 +29,32 @@ body {
 
 #start-screen {
   border: 1px solid white;
+  background-image: url(/images/tiles/start-screen_wt.png);
 }
 
 button {
   font-family: Lilliput Steps;
   color: white;
   border: 3px solid white;
-  background-color: black;
+  background-color: transparent;
   font-size: 24px;
   border-radius: 5px;
 }
 
 #startButton {
+  margin-top: 340px;
+  margin-right: 190px;
   width: 280px;
   height: 60px;
 }
 
-#moreButton {
-  width: 200px;
-  height: 60px;
+#startButton:hover {
+  background-image: url("/images/tiles/stripes_qu.png");
+  background-position: 60%;
 }
 
-/*hat noch keine verbindung*/
-:root {
-  --gradient: linear-gradient(
-    mediumslateblue,
-    deepskyblue,
-    palegreen,
-    gold,
-    lightsalmon
-  );
-}
-
-/*hat noch keine verbindung*/
-.gradient:hover {
-  background-image: let(--gradient);
-  cursor: pointer;
-}
-
-h1 {
-  margin: 0 25% 0;
-  background: linear-gradient(
-    to right,
-    mediumslateblue,
-    palegreen,
-    lightsalmon,
-    deepskyblue,
-    gold
-  );
-  font-family: Gothic Pixels;
-  font-size: 140px;
-  text-align: center;
-  /*line-height: 2px;
-  letter-spacing: 12px;*/
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-h3 {
+h3 #score {
   font-size: 24px;
-  color: white;
-}
-
-h2 {
-  padding: 0;
-  margin: 0;
-  font-family: Gothic Pixels;
-  color: white;
-  font-size: 100px;
-  letter-spacing: 10px;
-}
-
-h4 {
-  font-family: Lilliput Steps;
-  font-size: 20px;
   color: white;
 }
 
@@ -118,6 +66,32 @@ canvas {
   border-image: url(/images/tiles/wall_tilest.png) 36% round;
 }
 
+/*h2 {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 100px;
+  letter-spacing: 10px;
+}*/
+
 #game-over-screen {
   border: 3px solid white;
+  background-image: url(/images/tiles/end-screen_so.png);
+}
+
+h4 {
+  margin-top: 230px;
+  font-family: Lilliput Steps;
+  font-size: 20px;
+  color: white;
+}
+
+#moreButton {
+  width: 200px;
+  height: 60px;
+  margin-top: 40px;
+}
+
+#moreButton:hover {
+  background-image: url("/images/tiles/stripes_sm.png");
 }

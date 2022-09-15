@@ -5,7 +5,6 @@ class Score {
 
   draw() {
     const context = this.game.context;
-    // const scoreElement = document.getElementById("score");
     const scoreElement = document.getElementsById("score");
     const score = 0;
     scoreElement.innerText = "Souls: " + score;

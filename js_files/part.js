@@ -6,7 +6,7 @@ class Part {
     this.color = color;
 
     this.eaterImage = new Image();
-    this.eaterImage.src = "images/skull_w.png";
+    this.eaterImage.src = "images/sprites/skull_w.png";
   }
 
   draw() {
