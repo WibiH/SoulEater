@@ -1,6 +1,6 @@
 @font-face {
   font-family: Lilliput Steps;
-  src: url(/fonts/lilliput\ steps.ttf);
+  src: url(/font/lilliput_steps.ttf);
 }
 
 html,
@@ -11,7 +11,7 @@ body {
 
 body {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   font-family: Lilliput Steps;
@@ -22,14 +22,14 @@ body {
   height: 600px;
   display: flex;
   background-color: black;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 #start-screen {
   border: 1px solid white;
-  background-image: url(/images/tiles/start-screen_wt.png);
+  background-image: url(/images/tiles/start-screen_c.png);
 }
 
 button {
@@ -53,12 +53,19 @@ button {
   background-position: 60%;
 }
 
-h3 #score {
+#score {
+  font-family: Lilliput Steps;
   font-size: 24px;
   color: white;
 }
 
-canvas {
+#mainCanvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game {
   padding: 0;
   margin: 0;
   background-color: black;
@@ -66,32 +73,40 @@ canvas {
   border-image: url(/images/tiles/wall_tilest.png) 36% round;
 }
 
-/*h2 {
+#sprite,
+#manual {
   padding: 0;
-  margin: 0;
-  color: white;
-  font-size: 100px;
-  letter-spacing: 10px;
-}*/
+  margin: 60px;
+}
+
+#manual {
+  background-image: url(/images/scroll2.png);
+  background-color: black;
+  background-size: 150%;
+  background-position: 60%;
+}
 
 #game-over-screen {
+  display: flex;
+  flex-direction: column;
   border: 3px solid white;
-  background-image: url(/images/tiles/end-screen_so.png);
+  background-image: url(/images/tiles/end-screen.png);
+  background-size: 100%;
 }
 
 h4 {
-  margin-top: 230px;
-  font-family: Lilliput Steps;
+  margin-top: 20px;
   font-size: 20px;
   color: white;
 }
 
 #moreButton {
+  margin-top: 10px;
   width: 200px;
   height: 60px;
-  margin-top: 40px;
 }
 
 #moreButton:hover {
-  background-image: url("/images/tiles/stripes_sm.png");
+  background-image: url("/images/tiles/stripes_qu.png");
+  background-position: 55%;
 }

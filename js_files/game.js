@@ -1,3 +1,5 @@
+//this.soundtrack.load();
+
 class Game {
   constructor(gameScreenElement, gameOverScreenElement) {
     this.gameScreenElement = gameScreenElement;
@@ -17,11 +19,17 @@ class Game {
     this.pauseImg.src = "/images/tiles/stripes_sm.png";
 
     this.setControls();
-    this.reset();
     this.isPaused = false;
+    this.soundtrack = new Audio(
+      "/sound/159509__mistersherlock__halloween-graveyard-at-night-howling-wind.mp3"
+    );
+    this.soundtrack.loop = true;
+    this.soundtrack.volume = 0.3;
+    this.reset();
   }
 
   reset() {
+    this.soundtrack.play();
     this.score = 0;
     this.eater = new Eater(this);
     this.souls = [new Soul(this)];

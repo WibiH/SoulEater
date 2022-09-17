@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="#" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
@@ -13,8 +14,12 @@
     </div>
 
     <div id="game-screen" class="screen" style="display: none">
-      <h3 id="score"></h3>
-      <canvas id="game" width="400" height="400"></canvas>
+      <canvas id="sprite" width="200" height="200"></canvas>
+      <div id="mainCanvas">
+        <h3 id="score"></h3>
+        <canvas id="game" width="400" height="400"></canvas>
+      </div>
+      <canvas id="manual" width="200" height="200"> </canvas>
     </div>
 
     <div id="game-over-screen" class="screen" style="display: none">

@@ -6,8 +6,8 @@ class Eater {
 
     this.direction = "down";
 
-    this.soulNoiseUrl = "/sound/561543__toasthatter__soul-throw.wav"; //sigh
-    //this.soulNoiseUrl = "/sound/571502__kagateni__cute1.mp3"; // cute
+    //this.soulNoiseUrl = "/sound/561543__toasthatter__soul-throw.wav"; //sigh
+    this.soulNoiseUrl = "/sound/571502__kagateni__cute1.mp3"; // cute
     this.soulNoise = new Audio(this.soulNoiseUrl);
 
     for (let i = 0; i < 3; i++) {
@@ -32,6 +32,13 @@ class Eater {
         this.game.score++;
         this.game.addSouls();
         this.soulNoise.play();
+        this.soulNoise.volume = 0.3;
+
+        for (let i = 10; i < this.parts.length; i++) {
+          if (this.parts > i) {
+            this.game.speed++;
+          }
+        }
       }
     });
   }
