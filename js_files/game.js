@@ -13,18 +13,18 @@ class Game {
     // gridders
     this.tileCount = 20;
     this.tileSize = this.canvas.width / this.tileCount;
-    this.speed = 4;
+    this.speed = 2;
 
     this.pauseImg = new Image();
     this.pauseImg.src = "/images/tiles/stripes_sm.png";
 
     this.setControls();
     this.isPaused = false;
-    this.soundtrack = new Audio(
-      "/sound/159509__mistersherlock__halloween-graveyard-at-night-howling-wind.mp3"
-    );
+    this.soundtrack = new Audio("/sound/soulEater_Soundtrack.wav"); // from Kalme
     this.soundtrack.loop = true;
-    this.soundtrack.volume = 0.3;
+    this.soundtrack.volume = 1;
+    this.gameOverNoiseURL = "/sound/soulEater_gameOver.wav"; // from Kalme
+    this.gameOverNoise = new Audio(this.gameOverNoiseURL);
     this.reset();
   }
 
@@ -147,6 +147,8 @@ class Game {
       const counterElement =
         (this.gameOverScreenElement.children[1].firstElementChild.innerText =
           this.score);
+      this.gameOverNoise.play();
+      this.gameOverNoise.volume = 1;
       clearInterval(this.intervalId);
     }
   }

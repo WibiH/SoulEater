@@ -7,7 +7,7 @@ class Eater {
     this.direction = "down";
 
     //this.soulNoiseUrl = "/sound/561543__toasthatter__soul-throw.wav"; //sigh
-    this.soulNoiseUrl = "/sound/571502__kagateni__cute1.mp3"; // cute
+    this.soulNoiseUrl = "/sound/soulEater_Schnapp.wav"; // from Kalme
     this.soulNoise = new Audio(this.soulNoiseUrl);
 
     for (let i = 0; i < 3; i++) {
@@ -32,9 +32,9 @@ class Eater {
         this.game.score++;
         this.game.addSouls();
         this.soulNoise.play();
-        this.soulNoise.volume = 0.3;
+        this.soulNoise.volume = 0.8;
 
-        for (let i = 10; i < this.parts.length; i++) {
+        for (let i = 3; i < this.parts.length; i++) {
           if (this.parts > i) {
             this.game.speed++;
           }
