@@ -6,8 +6,7 @@ class Eater {
 
     this.direction = "down";
 
-    //this.soulNoiseUrl = "/sound/561543__toasthatter__soul-throw.wav"; //sigh
-    this.soulNoiseUrl = "/sound/soulEater_Schnapp.wav"; // from Kalme
+    this.soulNoiseUrl = "/sound/soulEater_Schnapp.wav"; // from SonjaDeffner|Kalme
     this.soulNoise = new Audio(this.soulNoiseUrl);
 
     for (let i = 0; i < 3; i++) {

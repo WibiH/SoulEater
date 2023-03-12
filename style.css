@@ -27,15 +27,17 @@ body {
   align-items: center;
 }
 
+/*  Start */
+
 #start-screen {
-  border: 1px solid white;
+  /* border: 1px solid white; */
   background-image: url(/images/tiles/start-screen_c.png);
 }
 
 button {
   font-family: Lilliput Steps;
   color: white;
-  border: 3px solid white;
+  border: 1px solid white;
   background-color: transparent;
   font-size: 24px;
   border-radius: 5px;
@@ -44,7 +46,7 @@ button {
 #startButton {
   margin-top: 340px;
   margin-right: 190px;
-  width: 280px;
+  width: 200px;
   height: 60px;
 }
 
@@ -53,9 +55,11 @@ button {
   background-position: 60%;
 }
 
+/*  In game */
+
 #score {
   font-family: Lilliput Steps;
-  font-size: 24px;
+  font-size: 30px;
   color: white;
 }
 
@@ -69,33 +73,45 @@ button {
   padding: 0;
   margin: 0;
   background-color: black;
-  border: 30px solid white;
-  border-image: url(/images/tiles/wall_tilest.png) 36% round;
+  border: 10px dashed white;
+  /* border-image: url(/images/tiles/bordertiles.png) 36% round; */
 }
+
+/*  Side screens */
 
 #sprite,
 #manual {
   padding: 0;
   margin: 60px;
+  background-image: url(/images/scroll.png);
+  background-repeat: no-repeat;
 }
 
 #manual {
-  background-image: url(/images/scroll2.png);
   background-color: black;
-  background-size: 150%;
+  background-size: 100%;
   background-position: 60%;
 }
+
+#manual p {
+  font-family: Lilliput Steps;
+  margin-top: 160px;
+  font-size: 20px;
+  color: white;
+}
+
+/*  Game Over */
 
 #game-over-screen {
   display: flex;
   flex-direction: column;
-  border: 3px solid white;
-  background-image: url(/images/tiles/end-screen.png);
+  /* border: 3px solid white; */
+  background-image: url(/images/tiles/endScreen.png);
   background-size: 100%;
 }
 
 h4 {
-  margin-top: 20px;
+  margin-top: 160px;
   font-size: 20px;
   color: white;
 }

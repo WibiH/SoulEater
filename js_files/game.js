@@ -1,5 +1,3 @@
-//this.soundtrack.load();
-
 class Game {
   constructor(gameScreenElement, gameOverScreenElement) {
     this.gameScreenElement = gameScreenElement;
@@ -20,10 +18,10 @@ class Game {
 
     this.setControls();
     this.isPaused = false;
-    this.soundtrack = new Audio("/sound/soulEater_Soundtrack.wav"); // from Kalme
+    this.soundtrack = new Audio("/sound/soulEater_Soundtrack.wav"); // from SonjaDeffner|Kalme
     this.soundtrack.loop = true;
     this.soundtrack.volume = 1;
-    this.gameOverNoiseURL = "/sound/soulEater_gameOver.wav"; // from Kalme
+    this.gameOverNoiseURL = "/sound/soulEater_gameOver.wav"; // from SonjaDeffner|Kalme
     this.gameOverNoise = new Audio(this.gameOverNoiseURL);
     this.reset();
   }
