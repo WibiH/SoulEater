@@ -18,7 +18,7 @@ class Game {
 
     this.setControls();
     this.isPaused = false;
-    this.soundtrack = new Audio("/sound/soulEater_Soundtrack.wav"); // from SonjaDeffner|Kalme
+    this.soundtrack = new Audio("/sound/Soul Eater_LANG_1.wav"); // from SonjaDeffner|Kalme
     this.soundtrack.loop = true;
     this.soundtrack.volume = 1;
     this.gameOverNoiseURL = "/sound/soulEater_gameOver.wav"; // from SonjaDeffner|Kalme
