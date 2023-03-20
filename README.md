@@ -1,7 +1,7 @@
 # Game | Soul Eater
 
-![soulEaterGame1](/images/soulEaterGame1.png)
 ![soulEaterCover](/images/soulEaterGame.png)
+![soulEaterGame1](/images/soulEaterGame1.png)
 
 Welcome to Soul Eater!
 Imagine you are a demon worm in a hell dungeon fullfilling your daily work of snatching souls...
