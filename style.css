@@ -19,7 +19,7 @@ body {
 }
 
 .screen {
-  width: 800px;
+  width: 100%;
   height: 600px;
   display: flex;
   background-color: black;
@@ -31,8 +31,8 @@ body {
 /*  Start */
 
 #start-screen {
-  /* border: 1px solid white; */
   background-image: url(/images/tiles/start-screen_c.png);
+  background-repeat: no-repeat;
 }
 
 button {
@@ -76,28 +76,33 @@ button {
   margin: 0;
   background-color: black;
   border: 10px dashed white;
-  /* border-image: url(/images/tiles/bordertiles.png) 36% round; */
 }
 
 /*  Side screens */
 
 #sprite,
 #manual {
-  padding: 0;
-  margin: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  height: 260px;
+  width: 260px;
   background-color: black;
-  background-size: 100%;
-  background-position: 60%;
-  background-image: url(/images/scroll.png);
+  background-position: center;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
+#manual {
+  background-image: url(/images/scroll.png);
+}
+
 #manual p {
-  font-family: Lilliput Steps;
-  font-size: 120px;
-  color: white;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 0 5px 20px 0;
+  padding: 0;
+  color: palegreen;
+  text-align: center;
 }
 
 /*  Game Over */
@@ -105,9 +110,9 @@ button {
 #game-over-screen {
   display: flex;
   flex-direction: column;
-  /* border: 3px solid white; */
   background-image: url(/images/tiles/endScreen.png);
   background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 #game-over-screen h4 {
