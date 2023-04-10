@@ -10,7 +10,11 @@
   </head>
   <body>
     <div id="start-screen" class="screen">
-      <button id="startButton">Eat</button>
+      <div class="title">
+        <h1>Soul<br />Eater</h1>
+        <button id="startButton">Eat</button>
+      </div>
+      <img src="/images/sprites/worm.png" alt="Soul Eater" />
     </div>
 
     <div id="game-screen" class="screen" style="display: none">
@@ -34,8 +38,9 @@
     </div>
 
     <div id="game-over-screen" class="screen" style="display: none">
-      <h2 class="gradient"></h2>
-      <h4>You ate <span id="endScore"> </span> Souls</h4>
+      <img src="/images/fire.png" alt="Soulfire" />
+      <h2 class="title">Game over</h2>
+      <p>You ate <span id="endScore"> </span> Souls</p>
       <button id="moreButton">Eat more</button>
       <p>Music & Sounds by Sonja Deffner | Kalme</p>
     </div>

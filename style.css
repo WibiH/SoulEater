@@ -3,6 +3,11 @@
   src: url(/font/lilliput_steps.ttf);
 }
 
+@font-face {
+  font-family: Gothic Pixels;
+  src: url(/font/GothicPixels.ttf);
+}
+
 html,
 body {
   height: 100%;
@@ -16,53 +21,84 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Lilliput Steps;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Gothic Pixels;
+  background: repeating-linear-gradient(
+    140deg,
+    rgba(123, 104, 238, 1) 0% 15%,
+    rgba(152, 251, 152, 1) 15% 30%,
+    rgba(255, 160, 122, 1) 30% 45%,
+    rgba(0, 191, 255, 1) 45% 60%,
+    rgba(255, 215, 0, 1) 60% 75%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
 }
 
 .screen {
   width: 100%;
   height: 600px;
   display: flex;
-  background-color: black;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  background-repeat: no-repeat;
 }
 
-/*  Start */
+/*--------Start--------*/
 
 #start-screen {
-  background-image: url(/images/tiles/start-screen_c.png);
-  background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 9rem;
+  padding-top: 50px;
 }
 
 button {
   font-family: Lilliput Steps;
   color: white;
   border: 5px solid white;
-  background-color: transparent;
+  background-color: black;
   font-size: 32px;
 }
 
 #startButton {
-  margin-top: 340px;
-  margin-right: 190px;
   width: 200px;
   height: 60px;
 }
 
-#startButton:hover {
+button:hover {
   color: black;
   border-color: black;
-  background-image: url("/images/tiles/stripes_qu.png");
+  background: repeating-linear-gradient(
+    140deg,
+    rgba(123, 104, 238, 1) 0% 15%,
+    rgba(152, 251, 152, 1) 15% 30%,
+    rgba(255, 160, 122, 1) 30% 45%,
+    rgba(0, 191, 255, 1) 45% 60%,
+    rgba(255, 215, 0, 1) 60% 75%
+  );
   background-position: 60%;
 }
 
-/*  In game */
+/*----------In game-----------*/
 
 #score {
   font-family: Lilliput Steps;
-  font-size: 30px;
   color: white;
+  font-size: 30px;
+  background-color: black;
 }
 
 #mainCanvas {
@@ -78,7 +114,7 @@ button {
   border: 10px dashed white;
 }
 
-/*  Side screens */
+/*----------Side screens----------*/
 
 #sprite,
 #manual {
@@ -95,7 +131,7 @@ button {
 }
 
 #manual {
-  background-image: url(/images/scroll.png);
+  background-image: url(/images/tiles/scroll.png);
 }
 
 #manual p {
@@ -105,19 +141,30 @@ button {
   text-align: center;
 }
 
-/*  Game Over */
+/*----------Game Over-----------*/
 
 #game-over-screen {
   display: flex;
   flex-direction: column;
-  background-image: url(/images/tiles/endScreen.png);
   background-size: 100%;
   background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
 
-#game-over-screen h4 {
-  margin-top: 220px;
-  font-size: 20px;
+#game-over-screen img {
+  width: 8%;
+}
+
+h2 {
+  font-size: 7rem;
+  line-height: 0;
+  padding: 110px 0 20px;
+}
+
+#game-over-screen p,
+#endScore {
+  font-size: 24px;
   color: white;
 }
 
@@ -128,15 +175,7 @@ button {
   height: 60px;
 }
 
-#moreButton:hover {
-  color: black;
-  border-color: black;
-  background-image: url("/images/tiles/stripes_qu.png");
-  background-position: 55%;
-}
-
-#game-over-screen p {
-  font-family: Lilliput Steps;
+#game-over-screen p:last-child {
   font-size: 12px;
   color: palegreen;
 }
