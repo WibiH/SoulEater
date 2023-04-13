@@ -8,10 +8,8 @@ class Score {
     const scoreElement = document.getElementsById("score");
     const score = 0;
     scoreElement.innerText = "Souls: " + score;
-    console.log(score);
     const scoreGameOver = document.getElementById("endScore");
     scoreGameOver.innerText = score;
-    console.log(score);
     context.save();
 
     context.restore();

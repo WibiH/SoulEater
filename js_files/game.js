@@ -145,12 +145,9 @@ class Game {
     if (result) {
       this.gameScreenElement.style.display = "none";
       this.gameOverScreenElement.style.display = "";
-      // console.dir(this.gameOverScreenElement);
       const counterElement =
         (this.gameOverScreenElement.children[1].firstElementChild.innerText =
           this.score);
-      console.log("this is score", score);
-
       this.gameOverNoise.play();
       this.gameOverNoise.volume = 1;
       clearInterval(this.intervalId);
