@@ -23,7 +23,7 @@ class Part {
       );
     } else {
       if (this.color) {
-        this.eater.game.context.fillStyle = this.color;
+        this.eater.game.context.fillStyle = this.color; //here´s the color happening
       } else {
         this.eater.game.context.fillStyle = "white";
       }

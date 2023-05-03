@@ -12,11 +12,6 @@ const imageUrlByColor = {
   lightsalmon: "/images/sprites/dullSoulcube.png",
   gold: "/images/sprites/unhappySoulcube.png",
   deepskyblue: "/images/sprites/grumpySoulcube.png",
-  /* mediumslateblue: "/images/sprites/happySoul.png",
-  palegreen: "/images/sprites/babySoul.png",
-  lightsalmon: "/images/sprites/dullSoul.png",
-  gold: "/images/sprites/unhappySoul.png",
-  deepskyblue: "/images/sprites/grumpySoul.png", */
 };
 
 const imagesByColor = {};
@@ -44,7 +39,6 @@ class Soul {
     if (eater.consumSouls()) {
       this.setRandomPosition();
     }
-
     this.setRandomColor();
   }
 
