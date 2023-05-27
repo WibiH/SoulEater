@@ -1,7 +1,6 @@
 # Soul Eater - Game 👾
 
-![soulEaterCover](/images/soulEaterGame.png)
-![soulEaterGame1](/images/soulEaterGame1.png)
+![soulEaterCover](/images/SoulEaterGame.png)
 
 ### Imagine you are a demon worm in a hell dungeon fullfilling your daily work of snatching souls...
 
@@ -9,6 +8,8 @@ This is my metal adaption of the game classic Snake. </br>
 It is my very first project in which I created a Snake game that fits my needs for dark yet cute old school games.
 
 ### Play <a href="https://soul-eater-game.netlify.app">Soul Eater</a> 👻
+
+![soulEaterGame1](/images/SoulEaterInGame.png)
 
 Soundtrack & Soundeffects by <a href="https://www.instagram.com/kalme_musik/?hl=en">Sonja Deffner | Kalme</a>
 
