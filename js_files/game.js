@@ -121,7 +121,7 @@ class Game {
     clearInterval(this.intervalId);
     this.isPaused = true;
     this.context.fillStyle = "palegreen";
-    this.context.font = "30px Lilliput Steps";
+    this.context.font = "1.875rem Lilliput Steps";
     this.context.textAlign = "center";
     this.context.textBaseline = "middle";
     this.context.fillText("Eating Paused", 200, 200);

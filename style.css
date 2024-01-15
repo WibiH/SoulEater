@@ -46,7 +46,7 @@ h6 {
 
 .screen {
   width: 80%;
-  height: 600px;
+  height: 37.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -67,20 +67,20 @@ h6 {
 
 h1 {
   font-size: 9rem;
-  padding-top: 50px;
+  padding-top: 3.125rem;
 }
 
 button {
   font-family: Lilliput Steps;
   color: white;
-  border: 5px solid white;
+  border: 0.3125rem solid white;
   background-color: black;
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 #startButton {
-  width: 200px;
-  height: 60px;
+  width: 12.5rem;
+  height: 3.75rem;
 }
 
 #startButton:hover {
@@ -100,7 +100,7 @@ button {
 #score {
   font-family: Lilliput Steps;
   color: white;
-  font-size: 30px;
+  font-size: 1.875rem;
   background-color: black;
 }
 
@@ -114,7 +114,7 @@ button {
   padding: 0;
   margin: 0;
   background-color: black;
-  border: 10px dashed white;
+  border: 0.625rem dashed white;
 }
 
 /*----------Side screens----------*/
@@ -124,9 +124,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px;
-  height: 260px;
-  width: 260px;
+  margin: 3.125rem;
+  height: 16.25rem;
+  width: 16.25rem;
   background-color: black;
   background-position: center;
   background-size: contain;
@@ -138,7 +138,7 @@ button {
 }
 
 #manual p {
-  margin: 0 5px 20px 0;
+  margin: 0 0.3125rem 1.25rem 0;
   padding: 0;
   color: palegreen;
   text-align: center;
@@ -162,19 +162,19 @@ button {
 h2 {
   font-size: 7rem;
   line-height: 0;
-  padding: 110px 0 0;
+  padding: 6.875rem 0 0;
 }
 
 #game-over-screen p,
 #endScore {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: white;
 }
 
 #moreButton {
-  margin-top: 20px;
-  margin-bottom: 40px;
-  width: 260px;
+  margin-top: 1.25rem;
+  margin-bottom: 2.5rem;
+  width: 16.25rem;
   height: 80%;
 }
 
@@ -192,6 +192,6 @@ h2 {
 }
 
 #game-over-screen p:last-child {
-  font-size: 12px;
+  font-size: 0.75rem;
   color: palegreen;
 }
